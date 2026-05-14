@@ -1,0 +1,27 @@
+{
+  "name": "Java 21 Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-21",
+            "path": "/usr/lib/jvm/msopenjdk-current",
+            "default": true
+          }
+        ],
+        "java.jdt.ls.java.home": "/usr/lib/jvm/msopenjdk-current",
+        "java.import.gradle.java.home": "/usr/lib/jvm/msopenjdk-current"
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-spring-boot-dashboard",
+        "vscjava.vscode-spring-boot-tools"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
