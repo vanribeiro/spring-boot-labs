@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<uploading.csvfile>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.uploading.csvfile.Application",
+            "projectName": "uploading.csvfile",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
