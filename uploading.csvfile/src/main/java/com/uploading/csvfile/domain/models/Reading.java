@@ -12,20 +12,20 @@ import lombok.ToString;
 public class Reading {
     private Long id;
     private Sensor sensor;
-    private Double value;
-    private LocalDateTime datetime;
+    private Double readingValue;
+    private LocalDateTime readingDatetime;
     private String location;
 
     public Reading(
             Long id,
             Sensor sensor,
-            Double value,
-            LocalDateTime datetime,
+            Double readingValue,
+            LocalDateTime readingDatetime,
             String location) {
         this.id = id;
         this.sensor = sensor;
-        this.value = value;
-        this.datetime = datetime;
+        this.readingValue = readingValue;
+        this.readingDatetime = readingDatetime;
         this.location = location;
 
         if (sensor == null) {
@@ -36,11 +36,11 @@ public class Reading {
             throw new ValidationException("Localização é obrigatória!");
         }
 
-        if (value == null) {
+        if (readingValue == null) {
             throw new ValidationException("Valor da leitura é obrigatório!");
         }
 
-        if (datetime == null) {
+        if (readingDatetime == null) {
             throw new ValidationException("Data/hora é obrigatória!");
         }
     }

@@ -36,10 +36,10 @@ public class ReadingEntity {
     private SensorEntity sensor;
     
     @Column(nullable = false)
-    private Double value;
+    private Double readingValue;
 
     @Column(nullable = false)
-    private LocalDateTime datetime;
+    private LocalDateTime readingDatetime;
 
     @ManyToOne
     @JoinColumn(name = "location_id", nullable = false)
