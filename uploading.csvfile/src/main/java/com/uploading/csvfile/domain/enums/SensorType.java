@@ -5,5 +5,5 @@ public enum SensorType {
     CLIMATE,
     TANK_LEVEL,
     PH,
-    GROW
+    SOIL
 }

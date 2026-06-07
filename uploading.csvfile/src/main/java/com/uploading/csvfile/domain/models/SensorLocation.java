@@ -13,20 +13,20 @@ public class SensorLocation {
     private String id;
     private String sensorId;
     private String locacation;
-    private LocalDateTime dataStart;
-    private LocalDateTime dateEnd;
+    private LocalDateTime startDate;
+    private LocalDateTime Enddate;
 
     public SensorLocation(
             String id,
             String sensorId,
             String locacation,
-            LocalDateTime dataStart,
-            LocalDateTime dateEnd) {
+            LocalDateTime startDate,
+            LocalDateTime Enddate) {
         this.id = id;
         this.sensorId = sensorId;
         this.locacation = locacation;
-        this.dataStart = dataStart;
-        this.dateEnd = dateEnd;
+        this.startDate = startDate;
+        this.Enddate = Enddate;
 
         if (sensorId == null) {
             throw new BusinessRuleException("Sensor é obrigatório!");
@@ -36,19 +36,19 @@ public class SensorLocation {
             throw new BusinessRuleException("Localização é obrigatória!");
         }
 
-        if (dataStart == null) {
+        if (startDate == null) {
             throw new BusinessRuleException("Data de inicio é mandatória!");
         }
     }
 
     public void encerrar(LocalDateTime dataEncerramento) {
-        if (this.dateEnd != null) {
+        if (this.Enddate != null) {
             throw new BusinessRuleException("Esta localização já foi encerrada");
         }
-        this.dateEnd = dataEncerramento;
+        this.Enddate = dataEncerramento;
     }
 
     public boolean isAtivo() {
-        return this.dateEnd == null;
+        return this.Enddate == null;
     }
 }

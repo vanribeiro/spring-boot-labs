@@ -1,5 +1,7 @@
 package com.uploading.csvfile.domain.enums;
 
+import org.springframework.security.core.userdetails.UserDetails;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
