@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 @Getter
-@ToString()
+@ToString
 public class SensorLocation {
     private String id;
     private String sensorId;
