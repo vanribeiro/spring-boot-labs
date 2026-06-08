@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-
+import jakarta.persistence.UniqueConstraint;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -18,7 +18,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "reading")
+@Table(name = "readings", uniqueConstraints = {
+        @UniqueConstraint(columnNames = { "sensor_id", "reading_datetime" })
+})
 @Getter
 @Setter
 
@@ -34,7 +36,7 @@ public class ReadingEntity {
     @ManyToOne
     @JoinColumn(name = "sensor_id", nullable = false)
     private SensorEntity sensor;
-    
+
     @Column(nullable = false)
     private Double readingValue;
 
