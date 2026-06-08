@@ -32,7 +32,7 @@ public class ReadingController {
     }
 
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = "Importar leituras via CSV")
     public ResponseEntity<String> importCsv(
             @Parameter(description = "Arquivo CSV com as leituras") @RequestParam("file") MultipartFile file) {
