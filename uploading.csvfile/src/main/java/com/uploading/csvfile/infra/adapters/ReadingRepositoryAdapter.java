@@ -1,4 +1,4 @@
-package com.uploading.csvfile.infra.adapters.out;
+package com.uploading.csvfile.infra.adapters;
 
 import java.time.LocalDateTime;
 import java.util.List;

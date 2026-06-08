@@ -1,4 +1,4 @@
-package com.uploading.csvfile.domain.service;
+package com.uploading.csvfile.domain.strategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,19 +9,17 @@ import com.uploading.csvfile.domain.exception.BusinessRuleException;
 import com.uploading.csvfile.domain.models.ImportReadingCommand;
 import com.uploading.csvfile.domain.models.Reading;
 import com.uploading.csvfile.domain.models.Sensor;
-import com.uploading.csvfile.domain.ports.in.ImportReadingsUseCase;
 import com.uploading.csvfile.domain.repository.ReadingRepository;
 import com.uploading.csvfile.domain.repository.SensorRepository;
-import com.uploading.csvfile.domain.strategy.SensorValidatorStrategy;
 
 @Service
-public class ImportReadingsService implements ImportReadingsUseCase {
+public class ImportReadingsValidatorStratagy implements ImportReadingsStratagy {
 
     private final List<SensorValidatorStrategy> validators;
     private final ReadingRepository repository;
     private final SensorRepository sensorRepository;
 
-    public ImportReadingsService(List<SensorValidatorStrategy> validators,
+    public ImportReadingsValidatorStratagy(List<SensorValidatorStrategy> validators,
             ReadingRepository repository,
             SensorRepository sensorRepository) {
         this.validators = validators;

@@ -1,4 +1,4 @@
-package com.uploading.csvfile.infra.adapters.in.web;
+package com.uploading.csvfile.infra.adapters.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.uploading.csvfile.domain.models.ImportReadingCommand;
-import com.uploading.csvfile.domain.ports.in.ImportReadingsUseCase;
-import com.uploading.csvfile.infra.adapters.in.web.dto.ReadingLineDto;
+import com.uploading.csvfile.domain.strategy.ImportReadingsStratagy;
+import com.uploading.csvfile.infra.adapters.dto.ReadingLineDto;
+import com.uploading.csvfile.infra.adapters.util.CsvParserUtil;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -24,9 +25,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 @RequestMapping("api/v1/readings")
 public class ReadingController {
 
-    private final ImportReadingsUseCase useCase;
+    private final ImportReadingsStratagy useCase;
 
-    public ReadingController(ImportReadingsUseCase useCase) {
+    public ReadingController(ImportReadingsStratagy useCase) {
         this.useCase = useCase;
     }
 

@@ -1,4 +1,4 @@
-package com.uploading.csvfile.infra.adapters.in.web.dto;
+package com.uploading.csvfile.infra.adapters.dto;
 
 import com.opencsv.bean.CsvBindByName;
 

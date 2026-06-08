@@ -1,4 +1,4 @@
-package com.uploading.csvfile.infra.adapters.in.web;
+package com.uploading.csvfile.infra.adapters.util;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -8,7 +8,7 @@ import java.util.List;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
-import com.uploading.csvfile.infra.adapters.in.web.dto.ReadingLineDto;
+import com.uploading.csvfile.infra.adapters.dto.ReadingLineDto;
 
 public class CsvParserUtil {
     public static List<ReadingLineDto> parse(InputStream inputStream) {

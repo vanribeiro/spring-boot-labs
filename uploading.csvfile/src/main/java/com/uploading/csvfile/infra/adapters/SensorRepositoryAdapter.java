@@ -1,4 +1,4 @@
-package com.uploading.csvfile.infra.adapters.out;
+package com.uploading.csvfile.infra.adapters;
 
 import java.util.List;
 import java.util.Optional;
